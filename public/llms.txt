@@ -1,0 +1,9 @@
+## Pages
+- [- Galerie Client](/clientgallery): No description available
+- [- Hugo Cartier](/service): No description available
+- [À Propos - Hugo Cartier](/about): Découvrez le parcours, la vision et les compétences de Hugo Cartier, photographe et vidéaste passionné.
+- [Accès Galerie Privée - Hugo Cartier](/gallerylogin): Accédez à votre galerie photo privée en utilisant vos identifiants.
+- [Galerie Client - Hugo Cartier](/gallery): Accédez à votre galerie photo privée. Téléchargez vos images et commandez des impressions de haute qualité.
+- [Hugo Cartier - Photographe & Vidéaste](/home): Portfolio de Hugo Cartier, photographe et vidéaste professionnel. Découvrez mes services de mariage, immobilier, portrait et événementiel.
+- [Paiement Annulé - Hugo Cartier](/cancel): Le processus de paiement a été annulé.
+- [Paiement Réussi - Hugo Cartier](/success): Confirmation de votre commande.

@@ -1,0 +1,95 @@
+{
+  "images": [
+    {
+      "id": "img-001",
+      "filename": "IMG_8061.jpg",
+      "alt": "Image de la galerie publique",
+      "description": "Une belle photographie de la galerie",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-002",
+      "filename": "Chammes192-CR3_DxO_DeepPRIMEXD.jpg",
+      "alt": "Photographie Chammes",
+      "description": "Photographie de la série Chammes",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-003",
+      "filename": "Chammes3.jpg",
+      "alt": "Photographie Chammes",
+      "description": "Photographie de la série Chammes",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-004",
+      "filename": "Chammes54-CR3_DxO_DeepPRIMEXD-2.jpg",
+      "alt": "Photographie Chammes",
+      "description": "Photographie de la série Chammes",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-005",
+      "filename": "IMG_5409.jpg",
+      "alt": "Photographie de portfolio",
+      "description": "Une belle photographie de portfolio",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-006",
+      "filename": "IMG_8740.jpg",
+      "alt": "Photographie de portfolio",
+      "description": "Une belle photographie de portfolio",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-007",
+      "filename": "IMG_8853.jpg",
+      "alt": "Photographie de portfolio",
+      "description": "Une belle photographie de portfolio",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-008",
+      "filename": "IMG_8903-CR3_DxO_DeepPRIMEXD.jpg",
+      "alt": "Photographie de portfolio",
+      "description": "Une belle photographie de portfolio",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-009",
+      "filename": "IMG_8912-CR3_DxO_DeepPRIMEXD.jpg",
+      "alt": "Photographie de portfolio",
+      "description": "Une belle photographie de portfolio",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    },
+    {
+      "id": "img-010",
+      "filename": "IMG_9198-CR3_DxO_DeepPRIMEXD.jpg",
+      "alt": "Photographie de portfolio",
+      "description": "Une belle photographie de portfolio",
+      "category": "portfolio",
+      "dateAdded": "2025-01-31",
+      "visible": true
+    }
+  ]
+}
+
