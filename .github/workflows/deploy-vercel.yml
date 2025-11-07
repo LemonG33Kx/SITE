@@ -24,15 +24,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Skip deploy if VERCEL_TOKEN is not set
-        if: ${{ secrets.VERCEL_TOKEN == '' }}
-        run: |
-          echo "VERCEL_TOKEN is not set. Skipping deploy step."
-
-      - name: Deploy to Vercel
-        if: ${{ secrets.VERCEL_TOKEN != '' }}
+      - name: Deploy to Vercel (skips if VERCEL_TOKEN missing)
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          # Deploy to production using the Vercel CLI and the token stored in secrets
+          # If the secret is not provided, skip gracefully instead of failing the workflow
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN is not set. Skipping deploy step."
+            exit 0
+          fi
+
+          echo "VERCEL_TOKEN present — running vercel deploy"
           npx vercel --prod --confirm --token "$VERCEL_TOKEN"
