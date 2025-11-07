@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import ContactFooter from '@/components/ContactFooter';
@@ -17,6 +16,7 @@ const navItems = [
     },
     { to: '/galerie', label: 'Galerie' },
     { to: '/a-propos', label: 'À Propos' },
+    { to: '/demande-devis', label: 'Demander un devis' },
 ];
 
 const Layout = ({ children }) => {

@@ -64,9 +64,11 @@ const ContactFooter = () => {
           </motion.button>
         </div>
 
-        <Button onClick={() => handleAction()} className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg font-light tracking-wide">
-          Demander un devis
-        </Button>
+        <Link to="/demande-devis">
+          <Button className="bg-white text-black hover:bg-gray-200 px-8 py-6 text-lg font-light tracking-wide">
+            Demander un devis
+          </Button>
+        </Link>
       </div>
       <div className="mt-16 pt-8 border-t border-white/10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-4">

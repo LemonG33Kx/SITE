@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -16,6 +15,7 @@ import ConditionsGeneralesPage from '@/pages/ConditionsGeneralesPage';
 import ConditionsUtilisationPage from '@/pages/ConditionsUtilisationPage';
 import PolitiqueConfidentialitePage from '@/pages/PolitiqueConfidentialitePage';
 import AdminGalleryPage from '@/pages/AdminGalleryPage';
+import QuotePage from '@/pages/QuotePage';
 
 const services = [
   {
@@ -99,6 +99,7 @@ function App() {
             <Route path="/conditions-utilisation" element={<ConditionsUtilisationPage />} />
             <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
             <Route path="/admin/galerie" element={<AdminGalleryPage />} />
+            <Route path="/demande-devis" element={<QuotePage />} />
           </Routes>
         </AnimatePresence>
       </Layout>
