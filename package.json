@@ -10,8 +10,10 @@
     "sync-gallery": "node tools/sync-gallery-images.js",
     "sync-hc": "node tools/rename-and-sync-images.js",
     "upload-images": "node tools/upload-and-sync.js"
+    ,"serve-api": "node server.js"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/is-prop-valid": "^1.3.1",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.3",
@@ -34,6 +36,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "6.16.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
