@@ -2,15 +2,6 @@ import { createClient } from '@supabase/supabase-js';
 // Optional: SendGrid for server-side email notifications
 import sendgrid from '@sendgrid/mail';
 
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL;
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  console.error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables');
-}
-
-const supabaseAdmin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, { auth: { persistSession: false } });
-
 // Configure SendGrid if API key is present
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 const EMAIL_TO = process.env.EMAIL_TO; // destination email (your inbox)
@@ -20,9 +11,20 @@ if (SENDGRID_API_KEY) {
 }
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method Not Allowed' });
+  // Resolve Supabase credentials at request time so we can return a clear error if missing
+  const SUPABASE_URL = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL;
+  const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+    console.error('Missing SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY environment variables');
+    return res.status(500).json({ message: 'Server not configured: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY missing' });
+  }
+
+  const supabaseAdmin = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, { auth: { persistSession: false } });
 
   try {
+  if (req.method !== 'POST') return res.status(405).json({ message: 'Method Not Allowed' });
+
     const payload = req.body;
 
     if (!payload || !payload.name || !payload.email || !payload.message) {

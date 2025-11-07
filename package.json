@@ -9,8 +9,10 @@
     "preview": "vite preview --host :: --port 3000",
     "sync-gallery": "node tools/sync-gallery-images.js",
     "sync-hc": "node tools/rename-and-sync-images.js",
-    "upload-images": "node tools/upload-and-sync.js"
-    ,"serve-api": "node server.js"
+    "upload-images": "node tools/upload-and-sync.js",
+    "serve-api": "node server.js",
+    "deploy:vercel": "npx vercel --prod --confirm",
+    "publish:vercel": "git push origin main && npx vercel --prod --confirm"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
